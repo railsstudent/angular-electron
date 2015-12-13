@@ -7,6 +7,10 @@ var app = require('app');
 var BrowserWindow = require('browser-window');
 var mainWindow = null;
 
+require('electron-debug')({
+    showDevTools: true
+});
+
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
