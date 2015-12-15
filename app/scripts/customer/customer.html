@@ -43,6 +43,27 @@
                   <label>Email</label>
                   <input ng-model="_ctrl.selected.email" type="email"></input>
                 </md-input-container>
+                <md-input-container md-no-float>
+                  <label>Address</label>
+                  <input ng-model="_ctrl.selected.address" type="text" ng-required="true">
+                  </input>
+                </md-input-container>
+                <md-input-container md-no-float>
+                  <label>City</label>
+                  <input ng-model="_ctrl.selected.city" type="text"></input>
+                </md-input-container>
+                <md-input-container md-no-float>
+                  <label>Phone</label>
+                  <input ng-model="_ctrl.selected.phone" type="text"></input>
+                </md-input-container>
+              </md-content>
+              <section layout="row" layout-sm="column" layout-align="center center"
+                  layout-wrap>
+                  <md-button class="md-raised md-info" ng-click="_ctrl.createCustomer()">Add</md-button>
+                  <md-button class="md-raised md-primary" ng-click="_ctrl.saveCustomer()">Save</md-button>
+                  <md-button class="md-raised md-danger" ng-click="_ctrl.cancelEdit()">Cancel</md-button>
+                  <md-button class="md-raised md-warn" ng-click="_ctrl.deleteCustomer()">Delete</md-button>
+              </section>
           </div>
       </md-content>
   </div>
