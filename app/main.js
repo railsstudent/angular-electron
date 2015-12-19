@@ -8,7 +8,8 @@ var BrowserWindow = require('browser-window');
 var mainWindow = null;
 
 require('electron-debug')({
-    showDevTools: true
+    //showDevTools: true
+    showDevTools : false
 });
 
 // Quit when all windows are closed.
@@ -23,7 +24,7 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
 
   // Create the brwoser window.
-  mainWindow = new BrowserWindow({ width: 800, height: 800});
+  mainWindow = new BrowserWindow({ width: 1200, height: 800});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
