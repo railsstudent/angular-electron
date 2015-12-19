@@ -63,7 +63,9 @@
           }
           else {
               //self.selected.customer_id = new Date().getSeconds();
-              customerService.create(self.selected).then(function (affectedRows) {
+              customerService.create(self.selected).then(function (newCustomer) {
+                  self.customers.push(newCustomer);
+                  selectCustomer(newCustomer, self.customers.length);
                   $mdDialog.show(
                       $mdDialog
                           .alert()
@@ -104,5 +106,5 @@
           }
       };
     };
-    
+
 })();

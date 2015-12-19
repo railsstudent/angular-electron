@@ -70,7 +70,12 @@
           if (err) {
             deferred.reject(err);
           } else {
-            deferred.resolve(result.insertId);
+            var newId = result.insertId;
+            getCustomerById(newId).then(function(rows) {
+              deferred.resolve(rows[0]);
+            },  function(err) {
+              deferred.reject(err);
+            });
           }
         });
         return deferred.promise;

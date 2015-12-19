@@ -8,8 +8,8 @@ var BrowserWindow = require('browser-window');
 var mainWindow = null;
 
 require('electron-debug')({
-    //showDevTools: true
-    showDevTools : false
+    showDevTools: true
+    //showDevTools : false
 });
 
 // Quit when all windows are closed.

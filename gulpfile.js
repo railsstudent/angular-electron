@@ -18,7 +18,7 @@ gulp.task('run', [], function() {
   childProcess.spawn(electron, ['./app'], { stdio : 'inherit' });
 });
 
-gulp.task('test-build-run', [], function() {
+gulp.task('run-build', [], function() {
   childProcess.spawn(electron, ['./build'], { stdio : 'inherit' });
 });
 
