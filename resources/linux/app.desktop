@@ -6,6 +6,6 @@ Name={{productName}}
 Comment={{description}}
 Exec=/opt/{{name}}/{{name}}
 Path=/opt/{{name}}/
-Icon=/opt/{{name}}/icon.png
+Icon=/opt/{{name}}/icon.ico
 Terminal=false
 Categories=Application;
